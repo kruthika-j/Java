@@ -3,7 +3,7 @@ public class A {
     private static A instance;
     String a = "kiru";
 
-     A() {
+    A() {
     }
 
     public static A getInstance() {
