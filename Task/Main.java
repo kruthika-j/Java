@@ -36,13 +36,15 @@ class ArrayList {
         if (index < 0 || index > no_of_elem) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + no_of_elem);
         }
-        newCapacity();
+        if(no_of_elem >= size){
+             newCapacity();
+        }
         for (int i = no_of_elem; i > index; i--) {
-            arr[i] = arr[i - 1];
+        arr[i] = arr[i - 1];
         }
         arr[index] = item;
         no_of_elem++;
-    }
+        }
      void deleteElement(int index) {
         if (index < 0 || index >= no_of_elem) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + no_of_elem);
@@ -73,6 +75,10 @@ class ArrayList {
         }
     }
 
+    void size(){
+            System.out.println("Array size is " +size +" No of elem "+ no_of_elem);
+    }
+
     private void  newCapacity() {
         int newCapacity = size * 2;
         Object[] newArray = new Object[newCapacity];
@@ -86,15 +92,26 @@ class ArrayList {
 public class Main {
     public static void main(String[] args) {
         ArrayList al = new ArrayList();
-        al.add(42);
-        al.add("Hello");
-        al.addAtLast("New Element");
-        al.addAtFirst(9);
-        al.addAtIndex(2,"hi");
-        al.deleteElement(3);
-        al.updateElement(2, 23);
-        Object[] sub = {1,2,3};
+        al.add(2);
+        al.add(3);
+        al.addAtFirst(1);
+        al.add(4);
+        al.add(5);
+        al.add(6);
+        al.add(7);
+        // al.deleteElement(3);
+        // al.updateElement(2, 23);
+        Object[] sub = {8,9,10};
         al.appendSubArray(sub);
         al.displayElements();
+        al.size();
+        al.addAtIndex(4,"11");
+        al.displayElements();
+        al.size();
+        al.addAtIndex(7, "12");
+        al.displayElements();
+        al.size();
+
+
     }
 }
