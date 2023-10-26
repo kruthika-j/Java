@@ -99,8 +99,6 @@ public class Main {
         al.add(5);
         al.add(6);
         al.add(7);
-        // al.deleteElement(3);
-        // al.updateElement(2, 23);
         Object[] sub = {8,9,10};
         al.appendSubArray(sub);
         al.displayElements();

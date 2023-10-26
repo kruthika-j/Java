@@ -1,7 +1,8 @@
+package Collections;
 import java.util.*;
-public class Arraylist{
+public class Linkedlist {
     public static void main(String[] args) {
-        List<String> a = new ArrayList<String>();
+        List<String> a = new LinkedList<String>();
         String[] fruits = {"apple","banana","grapes"};
 
         for(int i=0;i<fruits.length;i++){
@@ -11,6 +12,5 @@ public class Arraylist{
         for(int j=0;j<a.size();j++){
             System.out.println(a.get(j));
         }
-
     }
 }
