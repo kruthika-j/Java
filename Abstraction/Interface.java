@@ -24,12 +24,18 @@ class Circle implements Shape {
    
 }
 
-class Rectangle implements Shape {
+class Rectangle extends Circle {
     private double width;
     private double height;
+    private double radius;
+
+    public Rectangle(double r){
+        // super(r);
+        this(5d,6d);
+    }
 
     public Rectangle(double width, double height) {
-        this.width = width;
+        super(width);
         this.height = height;
     }
 
