@@ -2,8 +2,6 @@ package Reflection;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import Reflection.Bag;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -68,5 +66,7 @@ public class ReflectionExample {
                 System.out.println(c.getName());
             }
         }
+
+        
     }
 }
