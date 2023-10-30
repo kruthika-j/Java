@@ -3,13 +3,13 @@ package Reflection;
 public class Bag {
     private int pockets;
     String color;
-    private int pi;
+    private final int pi=3;
 
     Bag(){}
-    Bag(int p,String c){
+    Bag(int p,String c){ 
         this.pockets=p;
         this.color=c;
-        this.pi = 3;
+        
     }
     public void display(){
         System.out.println( "color:"+color+"\nPockets:"+pockets+"\npi:"+pi);
@@ -18,6 +18,6 @@ public class Bag {
         System.out.println("this is another display method");
     }
     public String getName() {
-        return "Keerathana";
+        return "Kiruthika";
     }
 }

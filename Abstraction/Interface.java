@@ -4,6 +4,9 @@ package Abstraction;
 interface Shape {
     double getArea();  // Abstract method
     double getPerimeter();  // Abstract method
+    default void show(){
+        System.out.println("Default method");
+    }
 }
 
 class Circle implements Shape {
@@ -56,8 +59,10 @@ public class Interface {
 
         System.out.println("Circle Area: " + circle.getArea());
         System.out.println("Circle Perimeter: " + circle.getPerimeter());
+        circle.show();
 
         System.out.println("Rectangle Area: " + rectangle.getArea());
         System.out.println("Rectangle Perimeter: " + rectangle.getPerimeter());
+        rectangle.show();
     }
 }
