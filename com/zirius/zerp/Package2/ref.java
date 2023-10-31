@@ -3,20 +3,39 @@ package com.zirius.zerp.Package2;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.annotation.Annotation;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import Reflection.MethodAnnotation;
+import Reflection.MyCustomAnnotation;
 
 public class ref {
     public static void main(String[] args) {
         
-        Set<Class> classes = findAllClassesUsingClassLoader("com.zirius.zerp.Package2");
+        Set<Class> classes = findAllClassesUsingClassLoader("Reflection");
         
         if (classes.isEmpty()) {
             System.out.println("No classes found in the package.");
         } else {
             System.out.println("Classes found in the package:");
             for (Class clazz : classes) {
-                System.out.println(clazz.getName());
+                // System.out.println(clazz.getName());
+
+                Annotation an = clazz.getAnnotation(MethodAnnotation.class);
+                // System.out.println(an);
+                if(an!=null){
+                    
+                    String annotationValue = ((MyCustomAnnotation) an).value();
+                    // System.out.println(annotationValue);
+                    if("CustomMethodAnnotation".equals(annotationValue)){
+                        System.out.println(clazz.getName());
+                    }
+                   
+                    // System.out.println(annotationValue);
+                    // System.out.println(an);
+                    // System.out.println(clazz.getName());
+                }
             }
         }
     }

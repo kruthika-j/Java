@@ -12,6 +12,7 @@ interface Shape {
 interface Diagram extends Shape{
 default void show(){
     System.out.println("hai");
+    Shape.super.show();
  }
 }
 
