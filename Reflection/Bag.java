@@ -1,6 +1,6 @@
 package Reflection;
 
-@MyCustomAnnotation(value = "SomeValue")
+@MyCustomAnnotation(value = "Annotation in Bag")
 
 public class Bag {
     private int pockets;
@@ -17,7 +17,7 @@ public class Bag {
     public void display(){
         System.out.println( "color:"+color+"\nPockets:"+pockets+"\npi:"+pi);
     } 
-     @MethodAnnotation(value = "CustomMethodAnnotation")
+@MethodAnnotation(value = "CustomMethodAnnotation")
     public void display(int i){
         System.out.println("this is another display method");
     }

@@ -1,7 +1,7 @@
 package Reflection;
 
 class Simple{}    
-@MyCustomAnnotation(value = "SomeValue")
+@MyCustomAnnotation(value = "Annotation in Try")
 
 public class Try{    
  public static void main(String args[]) throws Exception {    

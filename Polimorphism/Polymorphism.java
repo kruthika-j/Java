@@ -1,5 +1,8 @@
 package Polimorphism;
 
+import Reflection.MyCustomAnnotation;
+
+@MyCustomAnnotation(value = "Annotation in Bag")
 class Adder{
     public int add(int a,int b){
         return a+b;
@@ -9,6 +12,7 @@ class Adder{
     }
 }
 
+@MyCustomAnnotation(value = "Annotation in Bag")
 public class Polymorphism extends Adder {
     //overriding
     

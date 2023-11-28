@@ -3,6 +3,8 @@ package Reflection;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+
+
 class MyClass {
     private String privateField;
 
